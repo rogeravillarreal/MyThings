@@ -13,6 +13,8 @@
 		EE4D564F1E99479B004F795B /* MyThings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE4D564D1E99479B004F795B /* MyThings.xcdatamodeld */; };
 		EE4D56511E99479B004F795B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4D56501E99479B004F795B /* Assets.xcassets */; };
 		EE4D56541E99479B004F795B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4D56521E99479B004F795B /* LaunchScreen.storyboard */; };
+		EEFF76CB1E9D102300EA33B6 /* app.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFF76CA1E9D102300EA33B6 /* app.png */; };
+		EEFF76CD1E9D10FE00EA33B6 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF76CC1E9D10FE00EA33B6 /* BookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EE4D56501E99479B004F795B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE4D56531E99479B004F795B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE4D56551E99479B004F795B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEFF76CA1E9D102300EA33B6 /* app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app.png; sourceTree = "<group>"; };
+		EEFF76CC1E9D10FE00EA33B6 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				EE4D56461E99479B004F795B /* AppDelegate.swift */,
+				EEFF76CA1E9D102300EA33B6 /* app.png */,
 				EE4D56481E99479B004F795B /* ViewController.swift */,
 				EE4D564A1E99479B004F795B /* Main.storyboard */,
+				EEFF76CC1E9D10FE00EA33B6 /* BookViewController.swift */,
 				EE4D56501E99479B004F795B /* Assets.xcassets */,
 				EE4D56521E99479B004F795B /* LaunchScreen.storyboard */,
 				EE4D56551E99479B004F795B /* Info.plist */,
@@ -129,6 +135,7 @@
 				EE4D56541E99479B004F795B /* LaunchScreen.storyboard in Resources */,
 				EE4D56511E99479B004F795B /* Assets.xcassets in Resources */,
 				EE4D564C1E99479B004F795B /* Main.storyboard in Resources */,
+				EEFF76CB1E9D102300EA33B6 /* app.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE4D564F1E99479B004F795B /* MyThings.xcdatamodeld in Sources */,
+				EEFF76CD1E9D10FE00EA33B6 /* BookViewController.swift in Sources */,
 				EE4D56491E99479B004F795B /* ViewController.swift in Sources */,
 				EE4D56471E99479B004F795B /* AppDelegate.swift in Sources */,
 			);
@@ -305,6 +313,7 @@
 				EE4D565A1E99479B004F795B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

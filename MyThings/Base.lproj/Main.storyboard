@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="980" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Book View Controller-->
         <scene sceneID="xZ7-WV-h2t">
             <objects>
-                <viewController id="wTJ-K9-sDG" sceneMemberID="viewController">
+                <viewController id="wTJ-K9-sDG" customClass="BookViewController" customModule="MyThings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8GP-9o-pAt"/>
                         <viewControllerLayoutGuide type="bottom" id="LV1-Xg-f1p"/>
@@ -47,14 +47,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tI8-FO-k9O">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app.png" translatesAutoresizingMaskIntoConstraints="NO" id="tI8-FO-k9O">
                                 <rect key="frame" x="47.5" y="79" width="280" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="XWw-r6-1XW"/>
                                     <constraint firstAttribute="height" constant="200" id="wEc-hp-pBb"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-Q7-qsG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-Q7-qsG">
                                 <rect key="frame" x="47.5" y="299" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-Dm-XBD">
                                 <rect key="frame" x="172.5" y="359" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="wTJ-K9-sDG" eventType="touchUpInside" id="9Tp-qs-EJl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,10 +81,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="iIc-fc-613">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="UVk-t0-osi"/>
-                            <barButtonItem title="Photos" id="BpV-GL-ZVA"/>
+                            <barButtonItem systemItem="camera" id="UVk-t0-osi">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="wTJ-K9-sDG" id="VLs-5J-hzm"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="BpV-GL-ZVA">
+                                <connections>
+                                    <action selector="photosTapped:" destination="wTJ-K9-sDG" id="nt3-1q-l7L"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bookImageView" destination="tI8-FO-k9O" id="xfd-ew-POY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0a-wT-U56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,4 +120,7 @@
             <point key="canvasLocation" x="42" y="38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app.png" width="974" height="1100"/>
+    </resources>
 </document>
