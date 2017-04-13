@@ -12,6 +12,7 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBOutlet var bookImageView: UIImageView!
 
+    @IBOutlet var titleTextField: UITextField!
     var imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
@@ -28,6 +29,26 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(imagePicker, animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        bookImageView.image = image
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func addTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let book = Book(context: context)
+        book.title = titleTextField.text
+        
+        book.image = UIImagePNGRepresentation(bookImageView.image!)! as NSData
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController?.popViewController(animated: true)
     }
 }

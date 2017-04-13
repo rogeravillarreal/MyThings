@@ -60,8 +60,8 @@
 		EE4D56451E99479B004F795B /* MyThings */ = {
 			isa = PBXGroup;
 			children = (
-				EE4D56461E99479B004F795B /* AppDelegate.swift */,
 				EEFF76CA1E9D102300EA33B6 /* app.png */,
+				EE4D56461E99479B004F795B /* AppDelegate.swift */,
 				EE4D56481E99479B004F795B /* ViewController.swift */,
 				EE4D564A1E99479B004F795B /* Main.storyboard */,
 				EEFF76CC1E9D10FE00EA33B6 /* BookViewController.swift */,
