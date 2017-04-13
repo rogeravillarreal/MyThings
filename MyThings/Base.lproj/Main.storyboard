@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="5OJ-0G-A0m">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Nxx-TH-TG5">
                             <connections>
-                                <segue destination="wTJ-K9-sDG" kind="show" id="vR5-Mw-LYg"/>
+                                <segue destination="wTJ-K9-sDG" kind="show" identifier="bookSegue" id="vR5-Mw-LYg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -83,10 +83,19 @@
                                     <action selector="addTapped:" destination="wTJ-K9-sDG" eventType="touchUpInside" id="9Tp-qs-EJl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smK-fh-STc">
+                                <rect key="frame" x="165.5" y="421" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="wTJ-K9-sDG" eventType="touchUpInside" id="txq-Rg-Fp7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h3d-Q7-qsG" firstAttribute="centerX" secondItem="Ykf-zC-hIg" secondAttribute="centerX" id="Q4J-Z2-3hr"/>
+                            <constraint firstItem="smK-fh-STc" firstAttribute="centerX" secondItem="Ykf-zC-hIg" secondAttribute="centerX" id="S0D-q9-dYI"/>
+                            <constraint firstItem="smK-fh-STc" firstAttribute="top" secondItem="Dbg-Dm-XBD" secondAttribute="bottom" constant="32" id="n9x-GW-eQv"/>
                             <constraint firstItem="Dbg-Dm-XBD" firstAttribute="top" secondItem="h3d-Q7-qsG" secondAttribute="bottom" constant="30" id="or5-Vb-2hQ"/>
                             <constraint firstItem="tI8-FO-k9O" firstAttribute="top" secondItem="8GP-9o-pAt" secondAttribute="bottom" constant="15" id="q6I-Z7-pus"/>
                             <constraint firstItem="h3d-Q7-qsG" firstAttribute="width" secondItem="tI8-FO-k9O" secondAttribute="width" id="qvb-JQ-96S"/>
@@ -110,7 +119,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="Dbg-Dm-XBD" id="9Rk-9f-3jn"/>
                         <outlet property="bookImageView" destination="tI8-FO-k9O" id="xfd-ew-POY"/>
+                        <outlet property="deleteButton" destination="smK-fh-STc" id="SXh-ow-7ZF"/>
                         <outlet property="titleTextField" destination="h3d-Q7-qsG" id="M2T-Kg-xmV"/>
                     </connections>
                 </viewController>
